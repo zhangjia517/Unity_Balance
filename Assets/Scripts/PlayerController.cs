@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour
         {
             GameSceneController.self.GameOver();
             Destroy(trans.GetComponent<FixedJoint>());
-            Destroy(trans.FindChild("Balance").GetComponent<BoxCollider>());
-            iTween.MoveTo(trans.FindChild("Balance").gameObject, iTween.Hash("path", iTweenPath.GetPath("Path12"),
+            Destroy(trans.Find("Balance").GetComponent<BoxCollider>());
+            iTween.MoveTo(trans.Find("Balance").gameObject, iTween.Hash("path", iTweenPath.GetPath("Path12"),
                                                                                                                           "time", 8f,
                                                                                                                           "easetype", "linear"));
         }
